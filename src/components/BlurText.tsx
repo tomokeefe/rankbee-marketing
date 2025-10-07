@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { motion } from "motion/react";
 import {
   type ElementType,
   useEffect,
