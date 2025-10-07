@@ -229,7 +229,7 @@ export function DemoPage({ onPageChange }: DemoPageProps) {
       {/* Alternative Contact Options */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl mb-6 text-gray-900">Prefer a Different Approach?</h3>
+          <h3 className="text-2xl mb-6 text-gray-900">Prefer a Different <span className="gradient-highlight">Approach</span>?</h3>
           <p className="text-gray-600 mb-8">
             We get it—sometimes scheduling doesn't work. Here are other ways to connect:
           </p>
