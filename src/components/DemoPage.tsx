@@ -68,6 +68,7 @@ export function DemoPage({ onPageChange }: DemoPageProps) {
               className="text-5xl md:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
               text="Book a Demo: See RankBee in Action"
               delay={45}
+              highlightWords={["Demo", "RankBee"]}
             />
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               We'll walk through your brand's AI snapshot and brainstorm quick fixes. Your time, your agenda.
