@@ -2,7 +2,7 @@ import { BlurText } from "./BlurText";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { TrendingUp, Target, Users, BarChart3, Search, Zap } from "lucide-react";
+import { Target, Users, BarChart3 } from "lucide-react";
 import Frame2 from "../imports/Frame2";
 import heroImage from 'figma:asset/dffebf874a09a65c688763b399e1e6cda343d718.png';
 
