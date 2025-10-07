@@ -67,7 +67,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
             <BlurText
               as="h1"
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
-              text="We're RankBee: Real People Powering Smarter AI Wins"
+              text={"We're RankBee: Real People\nPowering Smarter AI Wins"}
               delay={45}
             />
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
