@@ -89,7 +89,7 @@ export function DemoPage({ onPageChange }: DemoPageProps) {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* What to Expect */}
             <div>
-              <h2 className="text-4xl mb-8 text-gray-900">Here's the Plan</h2>
+              <h2 className="text-4xl mb-8 text-gray-900">Here's the <span className="gradient-highlight">Plan</span></h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Our 20-minute demo is designed to give you immediate value, whether you decide to work with us or not. We believe in showing, not telling.
               </p>
