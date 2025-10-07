@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { BlurText } from "./BlurText";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
@@ -95,9 +96,12 @@ export function BlogPage({ onPageChange }: BlogPageProps) {
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
-              Fresh Takes on AI Search and Brand Magic
-            </h1>
+            <BlurText
+              as="h1"
+              className="text-5xl md:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
+              text="Fresh Takes on AI Search and Brand Magic"
+              delay={45}
+            />
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               From prompt hacks to visibility trends—tips from our team to keep you ahead.
             </p>
