@@ -45,6 +45,7 @@ function CardTitleText() {
         className="font-['Inter:ExtraBold',_sans-serif] font-extrabold leading-[64px] min-w-full relative shrink-0 text-[#252c32] text-[64px] tracking-[-2px] w-[min-content] justify-center"
         text={"10x Improvement in\nChatGPT Visibility in 14 Days"}
         delay={45}
+        highlightWords={["10x", "ChatGPT"]}
       />
       <div className="flex flex-col font-['Inter:Regular',_sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-gray-500 w-[686px]">
         <p className="leading-[28px]">We cut through the noise to show how ChatGPT, Gemini, and more rank you—then give you simple steps to climb higher. No fluff, just results that grow your business.</p>
