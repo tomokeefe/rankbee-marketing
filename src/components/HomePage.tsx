@@ -236,12 +236,9 @@ export function HomePage({ onPageChange }: HomePageProps) {
       {/* Footer CTA */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <BlurText
-            as="h2"
-            className="text-3xl sm:text-4xl lg:text-5xl mb-6 justify-center"
-            text="Ready to Hear Your Brand in AI?"
-            delay={35}
-          />
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">
+            Ready to Hear Your Brand in AI?
+          </h2>
           <p className="text-lg sm:text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
             Join hundreds of brands already winning in the AI conversation.
           </p>
