@@ -92,6 +92,7 @@ export function PricingPage({ onPageChange }: PricingPageProps) {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
               text="Plans That Fit Your Growth, No Surprises"
               delay={45}
+              highlightWords={["Plans", "Growth"]}
             />
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Start small or go big—unlimited users, weekly crawls, and insights that pay off fast. First month free on all.
@@ -124,7 +125,7 @@ export function PricingPage({ onPageChange }: PricingPageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">Find Your Fit</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">Find Your <span className="gradient-highlight">Fit</span></h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 sm:mb-16">
@@ -245,7 +246,7 @@ export function PricingPage({ onPageChange }: PricingPageProps) {
       {/* Footer CTA */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-6">Not Sure? Book a Demo to Test Drive</h2>
+          <h2 className="text-4xl mb-6">Not Sure? Book a <span className="gradient-highlight">Demo</span> to Test Drive</h2>
           <p className="text-xl mb-8 text-purple-100">
             See RankBee in action with your own brand data in just 20 minutes.
           </p>
