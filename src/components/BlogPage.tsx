@@ -101,6 +101,7 @@ export function BlogPage({ onPageChange }: BlogPageProps) {
               className="text-5xl md:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
               text="Fresh Takes on AI Search and Brand Magic"
               delay={45}
+              highlightWords={["AI", "Magic"]}
             />
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               From prompt hacks to visibility trends—tips from our team to keep you ahead.
@@ -139,7 +140,7 @@ export function BlogPage({ onPageChange }: BlogPageProps) {
               <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100 mb-4">
                 Featured Post
               </Badge>
-              <h2 className="text-3xl text-gray-900">Must Read</h2>
+              <h2 className="text-3xl text-gray-900">Must <span className="gradient-highlight">Read</span></h2>
             </div>
             
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -183,7 +184,7 @@ export function BlogPage({ onPageChange }: BlogPageProps) {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4 text-gray-900">Latest Reads</h2>
+            <h2 className="text-4xl mb-4 text-gray-900">Latest <span className="gradient-highlight">Reads</span></h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Actionable insights to help you win in the AI conversation.
             </p>
@@ -260,7 +261,7 @@ export function BlogPage({ onPageChange }: BlogPageProps) {
       {/* Newsletter CTA */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-6">Never Miss a Win</h2>
+          <h2 className="text-4xl mb-6">Never Miss a <span className="gradient-highlight">Win</span></h2>
           <p className="text-xl mb-8 text-purple-100">
             Get weekly tips, case studies, and AI insights delivered to your inbox.
           </p>
