@@ -1,5 +1,11 @@
-import { type ElementType, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
+import {
+  type ElementType,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import { cn } from "./ui/utils";
 
@@ -103,22 +109,11 @@ export function BlurText({
   const toSnapshots = animationTo ?? defaultTo;
 
   const segments = useMemo(() => {
-    const delimiter = animateBy === "words" ? " " : "";
-    const rawSegments = delimiter === "" ? text.split("") : text.split(delimiter);
-
     if (animateBy === "words") {
-      return rawSegments;
+      return text.split(" ");
     }
 
-    return rawSegments.reduce<string[]>((accumulator, segment, index) => {
-      accumulator.push(segment);
-
-      if (delimiter === "" && segment === "" && index < text.length - 1) {
-        accumulator.push(" ");
-      }
-
-      return accumulator;
-    }, []);
+    return Array.from(text);
   }, [animateBy, text]);
 
   const animatedSegments = useMemo(
@@ -150,14 +145,14 @@ export function BlurText({
     >
       {segments.map((segment, index) => {
         if (segment === "\n") {
-          return <span key={`line-break-${index}`} className="basis-full h-0" aria-hidden="true" />;
+          return <span key={`line-break-${index}`} className="basis-full w-full" aria-hidden="true" />;
         }
-
-        animatedIndex += 1;
 
         if (segment === "") {
           return null;
         }
+
+        animatedIndex += 1;
 
         const spanTransition = {
           duration: totalDuration,
@@ -178,6 +173,7 @@ export function BlurText({
             }
           >
             {segment === " " ? "\u00A0" : segment}
+            {animateBy === "words" && index < segments.length - 1 ? "\u00A0" : null}
           </motion.span>
         );
       })}
