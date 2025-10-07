@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { motion } from "motion/react";
 import {
   type ElementType,
   useEffect,
@@ -28,6 +29,8 @@ type BlurTextProps = {
   easing?: (t: number) => number;
   onAnimationComplete?: () => void;
   stepDuration?: number;
+  highlightWords?: string[];
+  highlightClassName?: string;
 };
 
 const buildKeyframes = (fromSnapshot: Snapshot, snapshots: Snapshot[]) => {
@@ -59,6 +62,8 @@ export function BlurText({
   easing = (t) => t,
   onAnimationComplete,
   stepDuration = 0.35,
+  highlightWords,
+  highlightClassName = "gradient-highlight",
 }: BlurTextProps) {
   const [inView, setInView] = useState(false);
   const containerRef = useRef<HTMLElement | null>(null);
@@ -107,6 +112,53 @@ export function BlurText({
 
   const fromSnapshot = animationFrom ?? defaultFrom;
   const toSnapshots = animationTo ?? defaultTo;
+
+  const normalizedHighlights = useMemo(
+    () => highlightWords?.map((word) => word.trim()).filter(Boolean) ?? [],
+    [highlightWords]
+  );
+
+  const highlightWordSet = useMemo(() => {
+    if (!normalizedHighlights.length) {
+      return new Set<string>();
+    }
+
+    return new Set(normalizedHighlights.map((word) => word.toLowerCase()));
+  }, [normalizedHighlights]);
+
+  const highlightCharIndices = useMemo(() => {
+    if (animateBy !== "characters" || !normalizedHighlights.length) {
+      return new Set<number>();
+    }
+
+    const indices = new Set<number>();
+    const lowerSource = text.toLowerCase();
+
+    normalizedHighlights.forEach((word) => {
+      const lowerWord = word.toLowerCase();
+      if (!lowerWord) {
+        return;
+      }
+
+      let searchIndex = 0;
+
+      while (searchIndex < lowerSource.length) {
+        const matchedIndex = lowerSource.indexOf(lowerWord, searchIndex);
+
+        if (matchedIndex === -1) {
+          break;
+        }
+
+        for (let offset = 0; offset < lowerWord.length; offset += 1) {
+          indices.add(matchedIndex + offset);
+        }
+
+        searchIndex = matchedIndex + lowerWord.length;
+      }
+    });
+
+    return indices;
+  }, [animateBy, normalizedHighlights, text]);
 
   const segments = useMemo(() => {
     if (animateBy === "words") {
@@ -161,10 +213,18 @@ export function BlurText({
           ease: easing,
         };
 
+        const shouldHighlight =
+          animateBy === "characters"
+            ? highlightCharIndices.has(index)
+            : highlightWordSet.has(segment.trim().toLowerCase());
+
         return (
           <motion.span
             key={`segment-${index}`}
-            className="inline-block will-change-[transform,filter,opacity]"
+            className={cn(
+              "inline-block will-change-[transform,filter,opacity]",
+              shouldHighlight && highlightClassName
+            )}
             initial={fromSnapshot}
             animate={inView ? animateKeyframes : fromSnapshot}
             transition={spanTransition}
