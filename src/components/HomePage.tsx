@@ -93,6 +93,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight text-center justify-center"
                 text={"10x Improvement in\nChatGPT Visibility in 14 Days"}
                 delay={45}
+                highlightWords={["10x", "ChatGPT"]}
               />
               
               {/* Mobile Description */}
@@ -136,6 +137,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
               className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 justify-center"
               text="Real Wins, Real Fast"
               delay={35}
+              highlightWords={["Wins", "Fast"]}
             />
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               From tracking competitors to spotting citation goldmines, here's how we make AI work for you.
@@ -171,6 +173,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
               className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 justify-center"
               text="What You'll Get Inside"
               delay={35}
+              highlightWords={["Inside"]}
             />
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Monitor visibility, compare brands, export insights—built for marketers who hate busywork.
@@ -212,6 +215,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
               className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 justify-center"
               text="Brands Like Yours Are Buzzing"
               delay={35}
+              highlightWords={["Buzzing"]}
             />
           </div>
 
@@ -237,7 +241,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">
-            Ready to Hear Your Brand in AI?
+            Ready to Hear Your <span className="gradient-highlight">Brand</span> in <span className="gradient-highlight">AI</span>?
           </h2>
           <p className="text-lg sm:text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
             Join hundreds of brands already winning in the AI conversation.
