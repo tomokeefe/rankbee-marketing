@@ -1,10 +1,8 @@
 import { BlurText } from "./BlurText";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Target, Users, BarChart3 } from "lucide-react";
 import Frame2 from "../imports/Frame2";
-import heroImage from 'figma:asset/dffebf874a09a65c688763b399e1e6cda343d718.png';
 
 
 interface HomePageProps {
@@ -111,16 +109,6 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 </Button>
               </div>
               
-              {/* Mobile/Tablet Hero Image */}
-              <div className="pt-6 sm:pt-8">
-                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mx-auto max-w-3xl">
-                  <ImageWithFallback
-                    src={heroImage}
-                    alt="RankBee AI optimization dashboard showing comparison metrics"
-                    className="w-full h-auto rounded-md"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
