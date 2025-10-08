@@ -103,7 +103,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
               </div>
 
               <div className="mobile-hero-visual-wrapper pt-8 px-6">
-                <div className="mobile-hero-visual-frame mx-auto max-w-xs overflow-hidden rounded-lg shadow-md">
+                <div className="mobile-hero-visual-frame mx-auto max-w-xs overflow-hidden rounded-lg shadow-xl">
                   <ImageWithFallback
                     src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F4d0f357a0fb24e96890af06b31e089e6?format=webp&width=800"
                     alt="Dashboard showing AI-driven brand ranking insights"
