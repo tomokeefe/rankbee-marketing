@@ -79,14 +79,6 @@ export function HomePage({ onPageChange }: HomePageProps) {
           {/* Mobile/Tablet Version */}
           <div className="lg:hidden w-full max-w-4xl mx-auto px-4 sm:px-6">
             <div className="text-center space-y-6 sm:space-y-8">
-              {/* Mobile Badge */}
-              <div className="inline-block bg-purple-100 rounded-lg px-4 py-2">
-                <p className="text-purple-600 text-sm font-medium">
-                  80% of brands are invisible in AI responses—fix that today
-                </p>
-              </div>
-              
-              {/* Mobile Headline */}
               <BlurText
                 as="h1"
                 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight text-center justify-center"
