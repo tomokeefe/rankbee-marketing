@@ -108,7 +108,7 @@ function TextHeading() {
           <CardTitleText />
           <Button2 />
           <div className="desktop-hero-visual-wrapper mt-[32px] w-full">
-            <div className="desktop-hero-visual-frame mx-auto max-w-[1100px] overflow-hidden rounded-[20px] shadow-[0px_24px_60px_rgba(80,72,120,0.15)]">
+            <div className="desktop-hero-visual-frame mx-auto max-w-[900px] overflow-hidden rounded-[20px] shadow-[0px_24px_60px_rgba(80,72,120,0.15)]">
               <ImageWithFallback
                 src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F229931e3bba641a0a46f7f904c9caa0d?format=webp&width=1200"
                 alt="Desktop dashboard showing AI ranking analytics"
@@ -654,7 +654,7 @@ function TableRow3() {
 function Text15() {
   return (
     <div className="absolute content-stretch flex h-[19px] items-start left-[61.84px] top-[15.75px] w-[9.023px]" data-name="Text">
-      <p className="basis-0 font-['Inter:Regular',_sans-serif] font-normal grow leading-[24px] min-h-px min-w-px not-italic relative shrink-0 text-[#d1d5dc] text-[16px] text-center tracking-[-0.3125px]">���</p>
+      <p className="basis-0 font-['Inter:Regular',_sans-serif] font-normal grow leading-[24px] min-h-px min-w-px not-italic relative shrink-0 text-[#d1d5dc] text-[16px] text-center tracking-[-0.3125px]">–</p>
     </div>
   );
 }
