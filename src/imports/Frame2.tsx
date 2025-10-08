@@ -1505,7 +1505,6 @@ export default function Frame2() {
   return (
     <div className="relative size-full">
       <HeroBlocks />
-      <ComparisonTable />
     </div>
   );
 }
