@@ -1,6 +1,7 @@
 import { BlurText } from "./BlurText";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Target, Users, BarChart3 } from "lucide-react";
 import Frame2 from "../imports/Frame2";
 
@@ -96,7 +97,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
               
               {/* Mobile Description */}
               <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                We cut through the noise to show how ChatGPT, Gemini, and more rank you—then give you simple steps to climb higher. No fluff, just results that grow your business.
+                We cut through the noise to show how ChatGPT, Gemini, and more rank you���then give you simple steps to climb higher. No fluff, just results that grow your business.
               </p>
               
               {/* Mobile CTA */}
@@ -108,7 +109,17 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   Try it now for free →
                 </Button>
               </div>
-              
+
+              <div className="mobile-hero-visual-wrapper pt-6">
+                <div className="mobile-hero-visual-frame mx-auto max-w-3xl overflow-hidden rounded-xl shadow-lg">
+                  <ImageWithFallback
+                    src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F045843b829a7415bb405439de5a5c5af?format=webp&width=800"
+                    alt="Dashboard showing AI-driven brand ranking insights"
+                    className="mobile-hero-visual w-full h-auto"
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
