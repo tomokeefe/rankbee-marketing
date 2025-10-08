@@ -104,11 +104,11 @@ function TextHeading() {
   return (
     <div className="relative shrink-0 w-full" data-name="Text/Heading">
       <div className="flex flex-col items-center size-full">
-        <div className="box-border content-stretch flex flex-col gap-[24px] items-center px-[64px] py-0 relative w-full">
+        <div className="box-border content-stretch flex flex-col gap-[28px] items-center px-[64px] py-0 relative w-full">
           <CardTitleText />
           <Button2 />
-          <div className="desktop-hero-visual-wrapper mt-[32px] w-full px-6">
-            <div className="desktop-hero-visual-frame mx-auto max-w-[520px] overflow-hidden rounded-[20px] shadow-[0px_18px_40px_rgba(80,72,120,0.12)]">
+          <div className="desktop-hero-visual-wrapper mt-[40px] w-full px-8">
+            <div className="desktop-hero-visual-frame mx-auto max-w-[460px] overflow-hidden rounded-[20px] shadow-[0px_16px_36px_rgba(80,72,120,0.1)]">
               <ImageWithFallback
                 src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F4d0f357a0fb24e96890af06b31e089e6?format=webp&width=1200"
                 alt="Desktop dashboard showing AI ranking analytics"
