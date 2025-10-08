@@ -30,13 +30,6 @@ function Text() {
   );
 }
 
-function Button() {
-  return (
-    <div className="bg-[#e6e3f9] hover:bg-[#d4d0f7] transition-colors duration-200 box-border content-stretch flex gap-[8px] h-[32px] items-center justify-center px-[16px] py-0 relative rounded-[8px] shrink-0 cursor-pointer" data-name="Button">
-      <Text />
-    </div>
-  );
-}
 
 function CardTitleText() {
   return (
@@ -112,7 +105,6 @@ function TextHeading() {
     <div className="relative shrink-0 w-full" data-name="Text/Heading">
       <div className="flex flex-col items-center size-full">
         <div className="box-border content-stretch flex flex-col gap-[32px] items-center px-[64px] py-0 relative w-full">
-          <Button />
           <CardTitleText />
           <Button2 />
           <div className="desktop-hero-visual-wrapper mt-[48px] w-full">
