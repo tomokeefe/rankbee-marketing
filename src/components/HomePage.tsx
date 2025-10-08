@@ -78,7 +78,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
           
           {/* Mobile/Tablet Version */}
           <div className="lg:hidden w-full max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center space-y-6 sm:space-y-7">
+            <div className="text-center space-y-6 sm:space-y-8">
               <BlurText
                 as="h1"
                 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight text-center justify-center"
@@ -102,8 +102,8 @@ export function HomePage({ onPageChange }: HomePageProps) {
                 </Button>
               </div>
 
-              <div className="mobile-hero-visual-wrapper pt-6 px-4">
-                <div className="mobile-hero-visual-frame mx-auto max-w-sm overflow-hidden rounded-xl shadow-md">
+              <div className="mobile-hero-visual-wrapper pt-8 px-6">
+                <div className="mobile-hero-visual-frame mx-auto max-w-xs overflow-hidden rounded-lg shadow-md">
                   <ImageWithFallback
                     src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F4d0f357a0fb24e96890af06b31e089e6?format=webp&width=800"
                     alt="Dashboard showing AI-driven brand ranking insights"
