@@ -108,7 +108,7 @@ function TextHeading() {
           <CardTitleText />
           <Button2 />
           <div className="desktop-hero-visual-wrapper mt-[48px] w-full px-10">
-            <div className="desktop-hero-visual-frame mx-auto max-w-[360px] overflow-hidden rounded-[16px] shadow-[0px_12px_28px_rgba(80,72,120,0.12)]">
+            <div className="desktop-hero-visual-frame mx-auto max-w-[360px] overflow-hidden rounded-[16px] shadow-[0px_20px_50px_rgba(80,72,120,0.18)]">
               <ImageWithFallback
                 src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F4d0f357a0fb24e96890af06b31e089e6?format=webp&width=1200"
                 alt="Desktop dashboard showing AI ranking analytics"
