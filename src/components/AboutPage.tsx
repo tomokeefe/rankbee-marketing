@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { BlurText } from "./BlurText";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -63,9 +64,13 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
-              We're RankBee: Real People Powering Smarter AI Wins
-            </h1>
+            <BlurText
+              as="h1"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
+              text={"We're RankBee: Real People\nPowering Smarter AI Wins"}
+              delay={45}
+              highlightWords={["RankBee", "People", "Smarter", "AI"]}
+            />
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Founded by folks who've scaled SEO at Amazon and beyond, we're here to make Generative AI Optimization feel straightforward—not overwhelming.
             </p>
@@ -89,7 +94,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">What Drives Us</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">What <span className="gradient-highlight">Drives</span> Us</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Three pillars that keep us grounded: Foundation in expertise, Innovation without overkill, Vision for tomorrow.
             </p>
@@ -122,7 +127,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 text-center mx-auto">Meet the Minds Making It Happen</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 text-center mx-auto">Meet the <span className="gradient-highlight">Minds</span> Making It Happen</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto text-center">
               Our crew: Battle-tested leaders who live and breathe digital growth.
             </p>
@@ -171,7 +176,7 @@ export function AboutPage({ onPageChange }: AboutPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 text-gray-900">Behind the Scenes</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 text-gray-900">Behind the <span className="gradient-highlight">Scenes</span></h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
                 We started this because traditional SEO felt outdated in the AI world. When ChatGPT launched, we realized brands needed a completely new playbook.
               </p>

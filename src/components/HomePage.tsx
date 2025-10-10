@@ -1,10 +1,9 @@
+import { BlurText } from "./BlurText";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { TrendingUp, Target, Users, BarChart3, Search, Zap } from "lucide-react";
+import { Target, Users, BarChart3 } from "lucide-react";
 import Frame2 from "../imports/Frame2";
-import heroImage from 'figma:asset/dffebf874a09a65c688763b399e1e6cda343d718.png';
 
 
 interface HomePageProps {
@@ -80,17 +79,13 @@ export function HomePage({ onPageChange }: HomePageProps) {
           {/* Mobile/Tablet Version */}
           <div className="lg:hidden w-full max-w-4xl mx-auto px-4 sm:px-6">
             <div className="text-center space-y-6 sm:space-y-8">
-              {/* Mobile Badge */}
-              <div className="inline-block bg-purple-100 rounded-lg px-4 py-2">
-                <p className="text-purple-600 text-sm font-medium">
-                  80% of brands are invisible in AI responses—fix that today
-                </p>
-              </div>
-              
-              {/* Mobile Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-                10x Improvement in<br />ChatGPT Visibility in 14 Days
-              </h1>
+              <BlurText
+                as="h1"
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight text-center justify-center"
+                text={"10x Improvement in\nChatGPT Visibility in 14 Days"}
+                delay={45}
+                highlightWords={["10x", "ChatGPT"]}
+              />
               
               {/* Mobile Description */}
               <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -106,17 +101,17 @@ export function HomePage({ onPageChange }: HomePageProps) {
                   Try it now for free →
                 </Button>
               </div>
-              
-              {/* Mobile/Tablet Hero Image */}
-              <div className="pt-6 sm:pt-8">
-                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mx-auto max-w-3xl">
+
+              <div className="mobile-hero-visual-wrapper pt-8 px-6">
+                <div className="mobile-hero-visual-frame mx-auto max-w-xs overflow-hidden rounded-lg shadow-xl">
                   <ImageWithFallback
-                    src={heroImage}
-                    alt="RankBee AI optimization dashboard showing comparison metrics"
-                    className="w-full h-auto rounded-md"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F4d0f357a0fb24e96890af06b31e089e6?format=webp&width=800"
+                    alt="Dashboard showing AI-driven brand ranking insights"
+                    className="mobile-hero-visual w-full h-auto"
                   />
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -128,7 +123,13 @@ export function HomePage({ onPageChange }: HomePageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">Real Wins, Real Fast</h2>
+            <BlurText
+              as="h2"
+              className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 justify-center"
+              text="Real Wins, Real Fast"
+              delay={35}
+              highlightWords={["Wins", "Fast"]}
+            />
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               From tracking competitors to spotting citation goldmines, here's how we make AI work for you.
             </p>
@@ -158,7 +159,13 @@ export function HomePage({ onPageChange }: HomePageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">What You'll Get Inside</h2>
+            <BlurText
+              as="h2"
+              className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 justify-center"
+              text="What You'll Get Inside"
+              delay={35}
+              highlightWords={["Inside"]}
+            />
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               Monitor visibility, compare brands, export insights—built for marketers who hate busywork.
             </p>
@@ -194,7 +201,13 @@ export function HomePage({ onPageChange }: HomePageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900">Brands Like Yours Are Buzzing</h2>
+            <BlurText
+              as="h2"
+              className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-gray-900 justify-center"
+              text="Brands Like Yours Are Buzzing"
+              delay={35}
+              highlightWords={["Buzzing"]}
+            />
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -218,12 +231,14 @@ export function HomePage({ onPageChange }: HomePageProps) {
       {/* Footer CTA */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">Ready to Hear Your Brand in AI?</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6">
+            Ready to Hear Your <span className="gradient-highlight">Brand</span> in <span className="gradient-highlight">AI</span>?
+          </h2>
           <p className="text-lg sm:text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
             Join hundreds of brands already winning in the AI conversation.
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-white text-cta hover:bg-gray-100 px-6 sm:px-8 text-base sm:text-lg"
           >
             Get Started Free

@@ -1,5 +1,8 @@
 import svgPaths from "./svg-bmi9qbsqji";
 
+import { BlurText } from "../components/BlurText";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+
 function Background() {
   return (
     <div className="absolute h-[1114px] left-[calc(50%-0.344px)] overflow-clip top-[calc(50%-19px)] translate-x-[-50%] translate-y-[-50%] w-[1567.31px]" data-name="Background">
@@ -27,22 +30,17 @@ function Text() {
   );
 }
 
-function Button() {
-  return (
-    <div className="bg-[#e6e3f9] hover:bg-[#d4d0f7] transition-colors duration-200 box-border content-stretch flex gap-[8px] h-[32px] items-center justify-center px-[16px] py-0 relative rounded-[8px] shrink-0 cursor-pointer" data-name="Button">
-      <Text />
-    </div>
-  );
-}
 
 function CardTitleText() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center not-italic relative shrink-0 text-center w-full" data-name="Card/Title/Text">
-      <p className="font-['Inter:ExtraBold',_sans-serif] font-extrabold leading-[64px] min-w-full relative shrink-0 text-[#252c32] text-[64px] tracking-[-2px] w-[min-content]">
-        10x Improvement in
-        <br aria-hidden="true" />
-        ChatGPT Visibility in 14 Days
-      </p>
+      <BlurText
+        as="p"
+        className="font-['Inter:ExtraBold',_sans-serif] font-extrabold leading-[64px] min-w-full relative shrink-0 text-[#252c32] text-[64px] tracking-[-2px] w-[min-content] justify-center"
+        text={"10x Improvement in\nChatGPT Visibility in 14 Days"}
+        delay={45}
+        highlightWords={["10x", "ChatGPT"]}
+      />
       <div className="flex flex-col font-['Inter:Regular',_sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-gray-500 w-[686px]">
         <p className="leading-[28px]">We cut through the noise to show how ChatGPT, Gemini, and more rank you—then give you simple steps to climb higher. No fluff, just results that grow your business.</p>
       </div>
@@ -107,9 +105,17 @@ function TextHeading() {
     <div className="relative shrink-0 w-full" data-name="Text/Heading">
       <div className="flex flex-col items-center size-full">
         <div className="box-border content-stretch flex flex-col gap-[32px] items-center px-[64px] py-0 relative w-full">
-          <Button />
           <CardTitleText />
           <Button2 />
+          <div className="desktop-hero-visual-wrapper mt-[48px] w-full px-10">
+            <div className="desktop-hero-visual-frame mx-auto max-w-[360px] overflow-hidden rounded-[16px] shadow-[0px_20px_50px_rgba(80,72,120,0.18)]">
+              <ImageWithFallback
+                src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F4d0f357a0fb24e96890af06b31e089e6?format=webp&width=1200"
+                alt="Desktop dashboard showing AI ranking analytics"
+                className="desktop-hero-visual block w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -118,7 +124,7 @@ function TextHeading() {
 
 function HeroBlocks() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[64px] h-[1030px] items-center left-0 overflow-clip pb-0 pt-[80px] px-[64px] top-0 w-[1440px]" data-name="Hero Blocks">
+    <div className="absolute box-border content-stretch flex flex-col gap-[48px] h-[1030px] items-center left-0 overflow-clip pb-0 pt-[48px] px-[64px] top-0 w-[1440px]" data-name="Hero Blocks">
       <Background />
       <TextHeading />
     </div>
@@ -1501,7 +1507,6 @@ export default function Frame2() {
   return (
     <div className="relative size-full">
       <HeroBlocks />
-      <ComparisonTable />
     </div>
   );
 }

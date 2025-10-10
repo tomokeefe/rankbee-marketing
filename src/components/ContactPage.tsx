@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { BlurText } from "./BlurText";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -65,9 +66,13 @@ export function ContactPage({ onPageChange }: ContactPageProps) {
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight">
-              Reach Out—Let's Make AI Work for You
-            </h1>
+            <BlurText
+              as="h1"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-900 max-w-4xl mx-auto leading-tight text-center justify-center"
+              text="Reach Out—Let's Make AI Work for You"
+              delay={45}
+              highlightWords={["AI"]}
+            />
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Email, chat, or call. Response in hours, not days.
             </p>
@@ -85,7 +90,7 @@ export function ContactPage({ onPageChange }: ContactPageProps) {
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 text-gray-900">Ways to Connect</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 text-gray-900">Ways to <span className="gradient-highlight">Connect</span></h2>
             <p className="text-sm sm:text-base text-gray-600">Choose the method that works best for you.</p>
           </div>
 
@@ -119,7 +124,7 @@ export function ContactPage({ onPageChange }: ContactPageProps) {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4 text-gray-900">Send Us a Message</h2>
+            <h2 className="text-4xl mb-4 text-gray-900">Send Us a <span className="gradient-highlight">Message</span></h2>
             <p className="text-xl text-gray-600">
               Whether it's a 'how-to' or 'tell me more,' we're here.
             </p>
@@ -213,7 +218,7 @@ export function ContactPage({ onPageChange }: ContactPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl mb-6 text-gray-900">A Little About Us</h2>
+              <h2 className="text-4xl mb-6 text-gray-900">A Little About <span className="gradient-highlight">Us</span></h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <MapPin className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
@@ -248,7 +253,7 @@ export function ContactPage({ onPageChange }: ContactPageProps) {
             </div>
 
             <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-              <h3 className="text-2xl mb-6 text-gray-900">Quick Response Times</h3>
+              <h3 className="text-2xl mb-6 text-gray-900">Quick <span className="gradient-highlight">Response</span> Times</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">General Inquiries</span>
